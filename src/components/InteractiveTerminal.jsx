@@ -81,7 +81,7 @@ Scroll down to the Projects section or click on any project card to inspect spec
   Name: ROHAN DUSANE
   Role: Full-Stack Software Developer
   Motto: "Precision engineering, clean code, and robust software architecture."
-  Location: Nashik, Maharashtra, India
+  Location: Chinchwad, Pune, Maharashtra, India
   Focus: Scalable web apps, IoT safety systems, and high-performance backends.`
         });
         if (onNavigate) {
@@ -194,13 +194,13 @@ Scroll down to the Projects section or click on any project card to inspect spec
       </div>
 
       {/* Quick Command Pills Bar */}
-      <div className="px-4 py-2 bg-[#111111] border-t border-[#222222] flex flex-wrap gap-2 items-center relative z-10">
-        <span className="text-[#666666] text-[10px] uppercase font-bold tracking-wider mr-1">Quick:</span>
+      <div className="px-3 sm:px-4 py-2 bg-[#111111] border-t border-[#222222] flex items-center gap-1.5 overflow-x-auto no-scrollbar relative z-10">
+        <span className="text-[#666666] text-[10px] uppercase font-bold tracking-wider mr-1 shrink-0">Quick:</span>
         {quickCmds.map((cmd) => (
           <button
             key={cmd}
             onClick={() => setInputVal(cmd)}
-            className="px-2.5 py-1 rounded bg-[#1e1e1e] hover:bg-[#333333] text-white/80 hover:text-white text-[10px] tracking-widest uppercase transition-colors border border-[#333333] cursor-pointer btn-click-pop"
+            className="px-2.5 py-1 rounded bg-[#1e1e1e] hover:bg-[#333333] text-white/80 hover:text-white text-[10px] tracking-widest uppercase transition-colors border border-[#333333] cursor-pointer btn-click-pop shrink-0"
           >
             {cmd}
           </button>
@@ -208,18 +208,18 @@ Scroll down to the Projects section or click on any project card to inspect spec
       </div>
 
       {/* Terminal Input Form */}
-      <form onSubmit={onSubmit} className="bg-[#0f0f0f] px-4 py-3 border-t border-[#222222] flex items-center gap-2 relative z-10">
+      <form onSubmit={onSubmit} className="bg-[#0f0f0f] px-3 sm:px-4 py-2.5 sm:py-3 border-t border-[#222222] flex items-center gap-2 relative z-10">
         <span className="text-green-400 font-bold">$</span>
         <input
           type="text"
           value={inputVal}
           onChange={(e) => setInputVal(e.target.value)}
-          placeholder="Type command here... (e.g. help, projects, skills)"
+          placeholder="Type command... (e.g. help, projects, bio)"
           className={`w-full bg-transparent focus:outline-none placeholder-[#555555] font-mono text-xs ${
             isMatrix ? 'text-green-400 font-bold' : 'text-white'
           }`}
         />
-        <button type="submit" className="px-3 py-1 bg-white text-black font-bold uppercase rounded text-[10px] hover:bg-neutral-200 transition-colors cursor-pointer btn-click-pop">
+        <button type="submit" className="px-3 py-1 bg-white text-black font-bold uppercase rounded text-[10px] hover:bg-neutral-200 transition-colors cursor-pointer btn-click-pop shrink-0">
           RUN
         </button>
       </form>

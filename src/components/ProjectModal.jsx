@@ -58,16 +58,16 @@ export default function ProjectModal({ project, onClose, triggerToast }) {
           )}
 
           {/* Metrics & Stats Grid */}
-          <div className="grid grid-cols-3 gap-3 p-4 bg-[#141414] rounded-xl border border-[#222222]">
-            <div>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 p-4 bg-[#141414] rounded-xl border border-[#222222]">
+            <div className="flex sm:block items-center justify-between">
               <div className="text-[10px] font-mono uppercase text-[#777777]">GitHub Stars</div>
               <div className="text-base font-bold text-white font-mono mt-0.5">★ {project.stats.stars}</div>
             </div>
-            <div>
+            <div className="flex sm:block items-center justify-between border-t sm:border-t-0 pt-2 sm:pt-0 border-[#222222]">
               <div className="text-[10px] font-mono uppercase text-[#777777]">Forks</div>
               <div className="text-base font-bold text-white font-mono mt-0.5">⑂ {project.stats.forks}</div>
             </div>
-            <div>
+            <div className="flex sm:block items-center justify-between border-t sm:border-t-0 pt-2 sm:pt-0 border-[#222222]">
               <div className="text-[10px] font-mono uppercase text-[#777777]">Telemetry Benchmark</div>
               <div className="text-base font-bold text-green-400 font-mono mt-0.5">{project.stats.metrics}</div>
             </div>
@@ -90,12 +90,12 @@ export default function ProjectModal({ project, onClose, triggerToast }) {
         </div>
 
         {/* Modal Footer Actions */}
-        <div className="flex items-center justify-between px-6 py-4 border-t border-[#222222] bg-[#141414]">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 px-4 sm:px-6 py-4 border-t border-[#222222] bg-[#141414]">
           <a
             href={project.githubUrl}
             target="_blank"
             rel="noreferrer"
-            className="px-4 py-2 rounded-lg bg-[#222222] hover:bg-[#333333] text-white text-xs font-mono font-semibold uppercase tracking-wider transition-colors flex items-center gap-2"
+            className="px-4 py-2.5 rounded-lg bg-[#222222] hover:bg-[#333333] text-white text-xs font-mono font-semibold uppercase tracking-wider transition-colors flex items-center justify-center gap-2"
             onClick={() => triggerToast && triggerToast(`Opening ${project.title} Repo`)}
           >
             <span>VIEW SOURCE CODE</span>
@@ -105,7 +105,7 @@ export default function ProjectModal({ project, onClose, triggerToast }) {
             href={project.demoUrl}
             target="_blank"
             rel="noreferrer"
-            className="px-5 py-2 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold uppercase tracking-wider transition-colors"
+            className="px-5 py-2.5 rounded-lg bg-white hover:bg-neutral-200 text-black text-xs font-bold uppercase tracking-wider transition-colors text-center"
             onClick={() => triggerToast && triggerToast(`Launching Live Demo`)}
           >
             LAUNCH DEMO ↗

@@ -393,10 +393,10 @@ export default function App() {
       {/* ========================================================================= */}
       {/* FIXED TOP NAVIGATION BAR */}
       {/* ========================================================================= */}
-      <header className={`fixed top-0 left-0 right-0 z-40 px-6 sm:px-12 flex items-center justify-between transition-all duration-[800ms] ease-out ${
+      <header className={`fixed top-0 left-0 right-0 z-40 px-4 sm:px-8 md:px-12 flex items-center justify-between transition-all duration-[800ms] ease-out ${
         isScrolled 
-          ? 'py-4 bg-black/80 backdrop-blur-xl border-b border-neutral-900/80 shadow-2xl' 
-          : 'py-6 sm:py-8 bg-transparent border-b border-transparent'
+          ? 'py-3.5 sm:py-4 bg-black/85 backdrop-blur-xl border-b border-neutral-900/80 shadow-2xl' 
+          : 'py-5 sm:py-8 bg-transparent border-b border-transparent'
       } ${
         isRevealed ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-6 pointer-events-none'
       }`}>
@@ -405,7 +405,7 @@ export default function App() {
         <div className="flex items-center gap-3">
           <button 
             onClick={() => scrollToSection('hero')}
-            className="font-sans text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-[0.3em] md:tracking-[0.45em] text-white hover:opacity-80 transition-opacity flex items-center gap-2 group cursor-pointer btn-click-pop whitespace-nowrap"
+            className="font-sans text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-[0.25em] sm:tracking-[0.35em] md:tracking-[0.45em] text-white hover:opacity-80 transition-opacity flex items-center gap-2 group cursor-pointer btn-click-pop whitespace-nowrap"
           >
             <span className="w-2 h-2 rounded-full bg-white group-hover:scale-125 transition-transform" />
             <span className="pr-1.5">ROHAN DUSANE</span>
@@ -547,29 +547,29 @@ export default function App() {
         <div className="relative z-30 w-full px-6 sm:px-12 pt-28 pointer-events-none" />
 
         {/* Flanking Subtext Banner */}
-        <div className="relative z-30 w-full px-6 sm:px-12 my-auto flex flex-col md:flex-row items-center justify-between gap-4 pointer-events-auto">
-          <div className={`flex items-center gap-2 bg-black/40 backdrop-blur-md px-3.5 py-1.5 rounded-md border border-neutral-900/60 shadow-lg transition-all duration-[1000ms] delay-[650ms] ease-out ${
+        <div className="relative z-30 w-full px-4 sm:px-8 md:px-12 my-auto flex flex-col md:flex-row items-center justify-between gap-3 sm:gap-4 pointer-events-auto">
+          <div className={`flex items-center gap-2 bg-black/50 backdrop-blur-md px-3.5 py-1.5 rounded-md border border-neutral-900/60 shadow-lg transition-all duration-[1000ms] delay-[650ms] ease-out ${
             isRevealed ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-12'
           }`}>
             <span className="inline-block w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-            <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-medium text-[#888888]">
+            <span className="text-[10px] sm:text-xs uppercase tracking-[0.2em] sm:tracking-[0.25em] font-medium text-[#888888]">
               • FULL-STACK ARCHITECT & DIGITAL ENFORCER
             </span>
           </div>
 
-          <div className={`flex items-center gap-3 transition-all duration-[1000ms] delay-[800ms] ease-out ${
+          <div className={`flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 transition-all duration-[1000ms] delay-[800ms] ease-out ${
             isRevealed ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'
           }`}>
             <button
               onClick={() => scrollToSection('projects')}
-              className="px-5 py-2 rounded-full bg-white/10 hover:bg-white hover:text-black border border-white/20 text-white text-[11px] font-mono font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer shadow-lg"
+              className="px-4 sm:px-5 py-2 rounded-full bg-white/10 hover:bg-white hover:text-black border border-white/20 text-white text-[10px] sm:text-[11px] font-mono font-bold tracking-widest uppercase transition-all duration-300 cursor-pointer shadow-lg"
             >
               EXPLORE PROJECTS ↓
             </button>
 
             <button
               onClick={() => scrollToSection('terminal')}
-              className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#222222] border border-[#333333] text-white text-[11px] font-mono flex items-center gap-2 transition-colors cursor-pointer shadow-lg"
+              className="px-3.5 sm:px-4 py-2 rounded-full bg-[#111111] hover:bg-[#222222] border border-[#333333] text-white text-[10px] sm:text-[11px] font-mono flex items-center gap-2 transition-colors cursor-pointer shadow-lg"
             >
               <TerminalIcon className="w-3.5 h-3.5 text-green-400" />
               <span>TERMINAL</span>
@@ -578,7 +578,7 @@ export default function App() {
         </div>
 
         {/* Hero Bottom Bar */}
-        <div className="relative z-30 w-full border-t border-[#222222] px-6 sm:px-12 py-5 flex items-center justify-between bg-black/40 backdrop-blur-md">
+        <div className="relative z-30 w-full border-t border-[#222222] px-4 sm:px-8 md:px-12 py-3.5 sm:py-5 flex items-center justify-between bg-black/50 backdrop-blur-md">
           <div className="flex items-center gap-5 sm:gap-7">
             <a 
               href="https://github.com/rohan20004" 
@@ -625,7 +625,7 @@ export default function App() {
       {/* ========================================================================= */}
       {/* SECTION 2: INTERACTIVE OS TERMINAL CONSOLE */}
       {/* ========================================================================= */}
-      <section id="terminal" className="w-full px-6 sm:px-12 py-16 max-w-6xl mx-auto">
+      <section id="terminal" className="w-full px-4 sm:px-8 md:px-12 py-12 sm:py-16 max-w-6xl mx-auto">
         <div className="mb-6 flex flex-col sm:flex-row sm:items-end justify-between gap-2">
           <div>
             <div className="flex items-center gap-2 mb-1">
@@ -647,14 +647,14 @@ export default function App() {
       {/* ========================================================================= */}
       {/* SECTION 3: PROJECTS SHOWCASE & FILTER GRID */}
       {/* ========================================================================= */}
-      <section id="projects" className="w-full px-6 sm:px-12 py-16 border-t border-[#1a1a1a] max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+      <section id="projects" className="w-full px-4 sm:px-8 md:px-12 py-12 sm:py-16 border-t border-[#1a1a1a] max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8 sm:mb-10">
           <div>
             <div className="flex items-center gap-2 mb-1">
               <CodeIcon className="w-4 h-4 text-white/80" />
               <span className="text-xs font-mono uppercase tracking-widest text-[#888888]">FEATURED WORK & UTILITIES</span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-sans">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white font-sans">
               SELECTED PROJECTS
             </h2>
           </div>
@@ -680,12 +680,12 @@ export default function App() {
         </div>
 
         {/* Category Pills */}
-        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
+        <div className="flex items-center gap-2 overflow-x-auto pb-3 mb-6 sm:mb-8 no-scrollbar">
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setProjectCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-mono tracking-widest uppercase transition-all shrink-0 cursor-pointer border ${
+              className={`px-3.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-[11px] sm:text-xs font-mono tracking-widest uppercase transition-all shrink-0 cursor-pointer border ${
                 projectCategory === cat
                   ? 'bg-white text-black font-bold border-white shadow-lg'
                   : 'bg-[#111111] text-[#888888] border-[#222222] hover:border-[#444444] hover:text-white'
@@ -696,8 +696,8 @@ export default function App() {
           ))}
         </div>
 
-        {/* Project Card Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {/* Project Card Grid: Exactly 2 Projects Per Row */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredProjects.map((project) => (
             <div
               key={project.id}
@@ -769,13 +769,13 @@ export default function App() {
       {/* ========================================================================= */}
       {/* SECTION 4: TECHNICAL SKILLS & METRICS */}
       {/* ========================================================================= */}
-      <section id="skills" className="w-full px-6 sm:px-12 py-16 border-t border-[#1a1a1a] max-w-7xl mx-auto">
-        <div className="mb-12">
+      <section id="skills" className="w-full px-4 sm:px-8 md:px-12 py-12 sm:py-16 border-t border-[#1a1a1a] max-w-7xl mx-auto">
+        <div className="mb-10 sm:mb-12">
           <div className="flex items-center gap-2 mb-1">
             <FourPointStar className="w-4 h-4 text-white/80" />
             <span className="text-xs font-mono uppercase tracking-widest text-[#888888]">TECHNICAL PROFICIENCIES</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white font-sans">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-black uppercase tracking-tight text-white font-sans">
             MY SKILL MATRIX
           </h2>
           <p className="text-xs font-mono text-[#888888] mt-2">
@@ -851,7 +851,7 @@ export default function App() {
       {/* ========================================================================= */}
       {/* SECTION 5: ABOUT ME & PHILOSOPHY */}
       {/* ========================================================================= */}
-      <section id="about" className="w-full px-6 sm:px-12 py-16 border-t border-[#1a1a1a] max-w-7xl mx-auto">
+      <section id="about" className="w-full px-4 sm:px-8 md:px-12 py-12 sm:py-16 border-t border-[#1a1a1a] max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           
           {/* Left Column: Profile Bio & Tenets */}
@@ -939,7 +939,7 @@ export default function App() {
       {/* ========================================================================= */}
       {/* SECTION 6: 04 // CONNECT & TRANSMISSION */}
       {/* ========================================================================= */}
-      <section id="connect" className="w-full px-6 sm:px-12 py-20 border-t border-[#1a1a1a] max-w-7xl mx-auto">
+      <section id="connect" className="w-full px-4 sm:px-8 md:px-12 py-14 sm:py-20 border-t border-[#1a1a1a] max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
           
           {/* Left Column: Heading, Direct Contact Cards & Socials */}
@@ -1002,7 +1002,7 @@ export default function App() {
                 <div>
                   <div className="text-[10px] font-mono uppercase tracking-wider text-[#888888]">LOCATION</div>
                   <div className="text-xs sm:text-sm font-bold text-white font-mono">
-                    Nashik, Maharashtra, India
+                    Chinchwad, Pune, Maharashtra, India
                   </div>
                 </div>
               </div>
@@ -1146,7 +1146,7 @@ export default function App() {
       {/* ========================================================================= */}
       {/* FOOTER BAR */}
       {/* ========================================================================= */}
-      <footer className="w-full border-t border-[#222222] bg-[#050505] px-6 sm:px-12 py-12">
+      <footer className="w-full border-t border-[#222222] bg-[#050505] px-4 sm:px-8 md:px-12 py-10 sm:py-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           
           {/* Left Side: Contact Specifications */}
@@ -1182,7 +1182,7 @@ export default function App() {
               <div className="space-y-1">
                 <div className="text-[#666666] uppercase text-[9px] tracking-wider">SYSTEM NODES / LOCATION</div>
                 <span className="text-white block">
-                  Nashik, MH, India
+                  Chinchwad, Pune, MH, India
                 </span>
               </div>
             </div>

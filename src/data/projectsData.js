@@ -62,7 +62,7 @@ export const PROJECTS = [
     image: '/crypto_trading_terminal.jpg',
     tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'Context API'],
     stats: { stars: 84, forks: 10, status: 'For Sale', metrics: 'Real-time Queues' },
-    demoUrl: 'https://github.com/rohan20004',
+    demoUrl: 'https://olive.pcmcs.in',
     githubUrl: 'https://github.com/rohan20004',
     featured: false,
     highlights: [
@@ -198,7 +198,7 @@ export const SKILL_CATEGORIES = [
 
 export const MILESTONES = [
   {
-    year: '2025 - Present',
+    year: '2025 (1 Year)',
     role: 'Web Full Stack Developer',
     company: 'BK Education & Welfare Society',
     description: 'Architecting full-stack web applications with React.js, Node.js, and MongoDB. Ensuring high API availability, security, and responsive UI components.'
